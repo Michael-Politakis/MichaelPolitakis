@@ -1,16 +1,30 @@
 <resources>
     <string name="app_name">Michael Politakis</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Michael Politakis</string>
+    <string name="nav_header_subtitle">michael.politakis.w@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_home">Michael Politakis</string>
+    <string name="menu_gallery">Bio</string>
+    <string name="menu_call">Call</string>
+    <string name="menu_github">Github</string>
     <string name="menu_send">Send</string>
+    <string name="bio_name">Michael Politakis</string>
+    <string name="bio_info">Peiraeus Athens Greece 18546\nhttps://www.linkedin.com/in/michael-politakis/\n6983874261\nmichael.politakis.w@gmail.com\nhttps://github.com/Renzard\nI have very good communication skills in English\nMilitary obligations have been fulfilled</string>
+    <string name="bio_objective">Objective</string>
+    <string name="bio_summary">My objective is to become a developer that can built anything that comes to mind.
+        Summary	I have experience in Android and website development. I graduated Business Management and Economics. I am currently working as an IT support.</string>
+    <string name="bio_developmentT">Development</string>
+    <string name="bio_development">Kotlin\nJava\nPython\nAndroid development\nObject Oriented Programming\nDjango\nI have experience in all OS platforms mostly using Linux</string>
+    <string name="bio_educationT">Education</string>
+    <string name="bio_education">Technological Institute Of Central Greece
+        Business Management 2017
+        Major: Management
+        Related course work: Personnel management, business management,business ethics, business law, macroeconomics, statistics, marketing, and sales, E commerce.
+        Essay about HR management, SA business model hierarchy both perfect with scores</string>
+    <string name="bio_experienceT">Experience</string>
+    <string name="bio_experience">IT support Exchange Admin, MSC\nPeiraeus 2019- until today\nI am currently working as an IT support for the Mediterranean Shipping Company.We support all the agencies of the company with issues from Office 365 platform Azure AD, server Monitoring.Acting as the second line of support for all the agency IT departments i have learned a lot of stuff i didnt know about the way companies administrate their tools and infrastracture.\n
+        Business Intern, Attica Bank\nAthens 2016- 2017\nI was responsible about managing the banks consumer lists.I was learning more about loan policies and how to manage consumers</string>
+    <string name="communicate">Communicate</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.renzard.michaelpolitakis.ui.send
+package com.renzard.michaelpolitakis.ui.github
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -14,42 +14,40 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.renzard.michaelpolitakis.R
 
-class SendFragment : Fragment() {
+class GithubFragment : Fragment() {
 
-    private lateinit var sendViewModel: SendViewModel
+    private lateinit var githubViewModel: GithubViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        sendViewModel =
-            ViewModelProviders.of(this).get(SendViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_send, container, false)
-        val textView: TextView = root.findViewById(R.id.text_send)
-        sendViewModel.text.observe(this, Observer {
+        githubViewModel =
+            ViewModelProviders.of(this).get(GithubViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_tools, container, false)
+        val textView: TextView = root.findViewById(R.id.text_tools)
+        githubViewModel.text.observe(this, Observer {
             textView.text = it
         })
 
-        emailToMichael()
+        githubOpen()
         return root
     }
 
-    private fun emailToMichael() {
-        val email = Intent(
-            Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto",
-                "michael.politakis.w@gmail.com", null
-            )
+    private fun githubOpen() {
+        val url = "https://github.com/Renzard"
+        val webOpen = Intent(
+            Intent.ACTION_VIEW
         )
+        webOpen.data = Uri.parse(url)
         try {
-            startActivity(Intent.createChooser(email, "Send mail to Michael"))
+            startActivity(Intent.createChooser(webOpen, "Open Github"))
         } catch (ex: ActivityNotFoundException) {
             Toast.makeText(
                 context, "No email clients installed",
                 Toast.LENGTH_SHORT
             ).show()
         }
-
     }
 }

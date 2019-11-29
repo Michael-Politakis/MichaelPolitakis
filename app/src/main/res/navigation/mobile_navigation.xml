@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
     <fragment
@@ -12,28 +11,23 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.renzard.michaelpolitakis.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_html"
+        android:name="com.renzard.michaelpolitakis.ui.html.HtmlBioFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.renzard.michaelpolitakis.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_call"
+        android:name="com.renzard.michaelpolitakis.ui.call.CallFragment"
+        android:label="@string/menu_call"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.renzard.michaelpolitakis.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:id="@+id/nav_github"
+        android:name="com.renzard.michaelpolitakis.ui.github.GithubFragment"
+        android:label="@string/menu_github"
         tools:layout="@layout/fragment_tools" />
 
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.renzard.michaelpolitakis.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"

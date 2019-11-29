@@ -1,4 +1,4 @@
-package com.renzard.michaelpolitakis.ui.send
+package com.renzard.michaelpolitakis.ui.call
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -14,42 +14,38 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.renzard.michaelpolitakis.R
 
-class SendFragment : Fragment() {
+class CallFragment : Fragment() {
 
-    private lateinit var sendViewModel: SendViewModel
+    private lateinit var callViewModel: CallViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        sendViewModel =
-            ViewModelProviders.of(this).get(SendViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_send, container, false)
-        val textView: TextView = root.findViewById(R.id.text_send)
-        sendViewModel.text.observe(this, Observer {
+        callViewModel =
+            ViewModelProviders.of(this).get(CallViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
+        val textView: TextView = root.findViewById(R.id.text_slideshow)
+        callViewModel.text.observe(this, Observer {
             textView.text = it
         })
-
-        emailToMichael()
+        callMichael()
         return root
     }
 
-    private fun emailToMichael() {
-        val email = Intent(
-            Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto",
-                "michael.politakis.w@gmail.com", null
-            )
+    private fun callMichael() {
+        val phone = "306983874261"
+        val call = Intent(
+            Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null)
         )
         try {
-            startActivity(Intent.createChooser(email, "Send mail to Michael"))
+            startActivity(Intent.createChooser(call, "Call Michael"))
         } catch (ex: ActivityNotFoundException) {
             Toast.makeText(
-                context, "No email clients installed",
+                context, "No call clients Installed",
                 Toast.LENGTH_SHORT
             ).show()
         }
-
     }
 }
