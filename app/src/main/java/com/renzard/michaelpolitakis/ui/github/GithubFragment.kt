@@ -25,7 +25,7 @@ class GithubFragment : Fragment() {
     ): View? {
         githubViewModel =
             ViewModelProviders.of(this).get(GithubViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_tools, container, false)
+        val root = inflater.inflate(R.layout.fragment_github, container, false)
         val textView: TextView = root.findViewById(R.id.text_tools)
         githubViewModel.text.observe(this, Observer {
             textView.text = it

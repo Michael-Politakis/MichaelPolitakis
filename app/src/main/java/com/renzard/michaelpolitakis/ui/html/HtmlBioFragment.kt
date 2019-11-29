@@ -20,7 +20,7 @@ class HtmlBioFragment : Fragment() {
     ): View? {
 
 
-        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
+        val root = inflater.inflate(R.layout.fragment_html, container, false)
         val webView: WebView = root.findViewById(R.id.bioView)
         webView.loadUrl("file:///android_asset/MichaelPolitakis.html")
         return root

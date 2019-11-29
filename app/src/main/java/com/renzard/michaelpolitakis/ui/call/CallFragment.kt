@@ -25,7 +25,7 @@ class CallFragment : Fragment() {
     ): View? {
         callViewModel =
             ViewModelProviders.of(this).get(CallViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
+        val root = inflater.inflate(R.layout.fragment_call, container, false)
         val textView: TextView = root.findViewById(R.id.text_slideshow)
         callViewModel.text.observe(this, Observer {
             textView.text = it
